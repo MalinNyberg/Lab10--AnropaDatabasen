@@ -147,36 +147,48 @@ namespace Lab10__AnropaDatabasen
 
                     Console.WriteLine("Fyll i kunduppgifter:");
                     Console.WriteLine("Skippa ett fält genom att trycka enter");
-
+                    
                     Console.Write($"Företagsnamn: ");
-                    newCustomer.CompanyName = Console.ReadLine();
-
+                    string companyName = Console.ReadLine();
+                    newCustomer.CompanyName = string.IsNullOrEmpty(companyName) ? null : companyName;
+                    //Conditional operator that checks if every input value is empty or not. 
+                    //it will be assigned to null if the input is empty.
+                    
                     Console.Write($"Namn på kontakt: ");
-                    newCustomer.ContactName = Console.ReadLine();
-
+                    string contactName = Console.ReadLine();
+                    newCustomer.ContactName = string.IsNullOrEmpty(contactName) ? null : contactName;
+                    
                     Console.Write($"Titel: ");
-                    newCustomer.ContactTitle = Console.ReadLine();
-
+                    string contactTitle = Console.ReadLine();
+                    newCustomer.ContactTitle = string.IsNullOrEmpty(contactName) ? null : contactName;
+                    
                     Console.Write($"Adress: ");
-                    newCustomer.Address = Console.ReadLine();
-
+                    string address = Console.ReadLine();
+                    newCustomer.Address = string.IsNullOrEmpty(address) ? null : address;
+                    
                     Console.Write($"Stad: ");
-                    newCustomer.City = Console.ReadLine();
-
+                    string city = Console.ReadLine();
+                    newCustomer.City = string.IsNullOrEmpty(city) ? null : city;
+                    
                     Console.Write($"Region: ");
-                    newCustomer.Region = Console.ReadLine();
-
+                    string region = Console.ReadLine();
+                    newCustomer.Region = string.IsNullOrEmpty(region) ? null : region;
+                    
                     Console.Write($"Postkod: ");
-                    newCustomer.PostalCode = Console.ReadLine();
-
+                    string postalCode = Console.ReadLine();
+                    newCustomer.PostalCode = string.IsNullOrEmpty(postalCode) ? null : postalCode;
+                    
                     Console.Write($"Land: ");
-                    newCustomer.Country = Console.ReadLine();
-
+                    string country = Console.ReadLine();
+                    newCustomer.Country = string.IsNullOrEmpty(country) ? null : country;
+                    
                     Console.Write($"Telefonnummer: ");
-                    newCustomer.Phone = Console.ReadLine();
-
+                    string phone = Console.ReadLine();
+                    newCustomer.Phone = string.IsNullOrEmpty(phone) ? null : phone;
+                    
                     Console.Write($"Fax: ");
-                    newCustomer.Fax = Console.ReadLine();
+                    string fax = Console.ReadLine();
+                    newCustomer.Fax = string.IsNullOrEmpty(fax) ? null : fax;
 
                     if (String.IsNullOrEmpty(newCustomer.CustomerId)) //if-statement that gives the new customer a random Customer Id.
                     {
@@ -189,14 +201,14 @@ namespace Lab10__AnropaDatabasen
 
                     Console.WriteLine("kund tillagd");
 
-                }
+                    }
 
-            }
-            //method to make a random generate for the cusomer id. 
-            static string GenerateRandomCustomerId()
-            {
-                return Guid.NewGuid().ToString().Substring(0, 5);
-            }
+                    }
+                    //method to make a random generate for the cusomer id. 
+                    static string GenerateRandomCustomerId()
+                    {
+                        return Guid.NewGuid().ToString().Substring(0, 5);
+                    }
 
         }
 
