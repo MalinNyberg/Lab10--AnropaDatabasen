@@ -151,7 +151,7 @@ namespace Lab10__AnropaDatabasen
                     Console.Write($"Företagsnamn: ");
                     string companyName = Console.ReadLine();
                     newCustomer.CompanyName = string.IsNullOrEmpty(companyName) ? null : companyName;
-                    //Conditional operator that checks if every input value is empty or not. 
+                    //Conditional operator/boolean that checks if every input value is empty or not. 
                     //it will be assigned to null if the input is empty.
                     
                     Console.Write($"Namn på kontakt: ");
