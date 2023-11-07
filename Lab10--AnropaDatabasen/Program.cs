@@ -33,7 +33,7 @@ namespace Lab10__AnropaDatabasen
                             Console.Clear();
                             Console.WriteLine("Stigande eller fallande ordning?");
                             Console.Write("[stigande/fallande]:");
-                            sortingOrder = Console.ReadLine().ToUpper();
+                            sortingOrder = Console.ReadLine().ToLower();
                         }
 
                         allCustomers(sortingOrder); //Calls the method to show all customers
