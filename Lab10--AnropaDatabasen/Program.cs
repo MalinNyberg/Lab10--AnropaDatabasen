@@ -22,8 +22,8 @@ namespace Lab10__AnropaDatabasen
 
                 var choice = Console.ReadLine();
 
-                switch (choice) //This switch statement is used in the code to enable the user to select different options based on their input.
-                {               // In this case, the switch statement is used to handle the user's menu choices and direct the program to different functions depending on the selected option.
+                switch (choice) //This switch statement is used to enable the user to select different options based on their input.
+                {               // In this case, the switch statement is used to handle the user's menu choices and direct the program to different fmethods depending on the selected option.
                     case "1":
 
                         string sortingOrder = null;
